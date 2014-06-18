@@ -5,6 +5,6 @@ from wtforms.validators import Required
 
 
 class NewPostForm(Form):
-	title = TextField('title', validators = [Required()])
-	author = TextField('author', validators = [Required()])
-	content = TextAreaField('content', validators = [Required()])
+	title = TextField('title', validators = [Required(message="Give your post a title")])
+	author = TextField('author', validators = [Required(message="Tell us who you are!")])
+	content = TextAreaField('content', validators = [Required(message="Write something!")])
