@@ -1,0 +1,16 @@
+/* socialjusticestyle.css */
+
+
+/* general page style properties */
+.container {
+	background-color: black;
+	font-family: helvetica;
+	color: white;
+}
+
+/* landing page header */
+#sitename {
+	font-size: 75px;
+	font-weight: bold;
+	font-style: italic;
+}
