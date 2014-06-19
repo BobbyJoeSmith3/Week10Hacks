@@ -1,5 +1,6 @@
 #models.py
 
+#connect to the database created in postgres
 from app import db
 
 class Post(db.Model):

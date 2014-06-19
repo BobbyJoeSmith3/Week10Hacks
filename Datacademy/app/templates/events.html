@@ -1,0 +1,27 @@
+<!-- events.html -->
+
+<html>
+	<head>
+		<title> Events - Datacademy </title>
+
+	</head>
+
+	<body>
+		<h1> Datacademy </h1>
+		<h2> These are our events: </h2>
+
+		<!-- print the all of the events info for each entry in the table Events -->
+		<div>
+		{% for e in events: %}
+			<p>{{events.event_name}} {{events.date}}, {{events.city}} {{events.attendance}}</p>
+		</div>
+		{% endfor %}
+
+		<!-- links to navigate around the website -->
+		<p><a href="{{ url_for('members') }}">Now show me the members info!</a></p>
+		<p><a href="{{ url_for('index') }}">Take me back to the homepage!</a></p>
+
+	</body>
+
+
+</html>
