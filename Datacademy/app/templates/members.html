@@ -12,7 +12,7 @@
 		<!-- print the all of the member info for each entry in the table Members -->
 		<div>
 		{% for m in members: %}
-			<p>{{members.firstname}} {{members.lastname}}, {{members.email}} {{members.password}}</p>
+			<p> Firstname: {{m.firstname}} | Lastname: {{m.lastname}} | Email: {{m.email}} | Password: {{m.password}}</p>
 		</div>
 		{% endfor %}
 

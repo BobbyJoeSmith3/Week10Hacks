@@ -13,7 +13,7 @@
 		<!-- print the all of the events info for each entry in the table Events -->
 		<div>
 		{% for e in events: %}
-			<p>{{events.event_name}} {{events.date}}, {{events.city}} {{events.attendance}}</p>
+			<p> Eventname: {{e.event_name}} | Eventdate: {{e.date}} | City: {{e.city}} | Attendance: {{e.attendance}}</p>
 		</div>
 		{% endfor %}
 
