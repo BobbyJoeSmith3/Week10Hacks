@@ -3,19 +3,19 @@
 #Doc: urls.py
 #========================
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 from polls import views
-from django.contrib import admin
-admin.autodiscover()
 
-create a URLconf so that Django can call a view by mapping it to a URL
+
+#create a URLconf so that Django can call a view by mapping it to a URL
 urlpatterns = patterns('', 
-	url(r'^$', views.index, name='index')
-)
-
-#point the root URLcong at the polls.urls module
-urlpatterns = patterns('',
-	url(r'^polls/', include('polls.urls')),
-	url(r'^admin/', include(admin.site.urls)),
+	#ex: /polls/
+	url(r'^$', views.index, name='index'),
+	#ex: /polls/5/
+	url(r'^(?P<poll_id>\d+)/$', views.detail, name='detail'),
+	#ex: /poll/5/results/
+	url(r'^(?P<poll_id>\d+)/results/$', views.results, name='results'),
+	#ex: /polls/5/vote/
+	url(r'^(?P<poll_id>\d+)/vote/$', views.vote, name='vote'),
 )
 

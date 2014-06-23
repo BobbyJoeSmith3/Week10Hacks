@@ -1,0 +1,19 @@
+<!-- ========================================
+Project: 	ThouShallPass
+App: 		ThouShallPass/Polls
+Doc:		index.html
+========================================= -->
+
+{% if latest_poll_list %}
+	<ul>
+		{% for poll in latest_poll_list %}
+			<!-- hardcode linking to a poll 
+			<li><a href="/polls/{{poll.id}}/">{{ poll.question }}</a></li> -->
+
+			<!-- This is the way to call a link to a poll that isn't tightly coupled and has removed the reliance on specific URL paths -->
+			<li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No polls are available.</p>
+{% endif %}
