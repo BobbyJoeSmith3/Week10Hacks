@@ -3,6 +3,8 @@ Project: 	ThouShallPass
 App: 		ThouShallPass/Polls
 Doc:		index.html
 ========================================= -->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 
 {% if latest_poll_list %}
 	<ul>
